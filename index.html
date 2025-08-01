@@ -3,40 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toronto Plumbing Now - Emergency Plumbing Services</title>
+    <title>Licensed & Affordable Plumbers in Toronto | Toronto Plumbing Now</title>
+    <meta name="description" content="Need an emergency plumber in Toronto? Get fast, licensed, affordable service from trusted professionals. Call us now or request a quote.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Licensed & Affordable Plumbers in Toronto | Toronto Plumbing Now">
+    <meta property="og:description" content="Need an emergency plumber in Toronto? Get fast, licensed, affordable service from trusted professionals. Call us now or request a quote.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://torontoplumbingnow.com">
+    <meta property="og:image" content="https://torontoplumbingnow.com/images/plumbing-hero.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Toronto Plumbing Now",
+        "description": "Licensed and affordable plumbing services in Toronto",
+        "url": "https://torontoplumbingnow.com",
+        "telephone": "+1-416-555-0199",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Main Street",
+            "addressLocality": "Toronto",
+            "addressRegion": "ON",
+            "postalCode": "M5V 3A8",
+            "addressCountry": "CA"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 43.6532,
+            "longitude": -79.3832
+        },
+        "openingHours": "Mo-Su 00:00-23:59",
+        "priceRange": "$$",
+        "serviceArea": {
+            "@type": "City",
+            "name": "Toronto"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Plumbing Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Emergency Plumbing"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Drain Cleaning"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Backflow Testing"
+                    }
+                }
+            ]
         }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-blue: #007bff;
+            --accent-blue: #e3f2fd;
+            --dark-blue: #003d82;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
         .hero {
-            background: url('https://source.unsplash.com/1600x900/?plumbing,water') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://source.unsplash.com/1600x900/?plumbing,water') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        
         .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        .contact-form {
-            background: #f8f9fa;
-            padding: 40px;
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            padding: 12px 30px;
+            font-weight: 600;
             border-radius: 8px;
+            transition: all 0.3s ease;
         }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-blue);
+            border-color: var(--dark-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-control {
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            padding: 12px 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.25);
+        }
+        
+        .floating-call-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(40, 167, 69, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .floating-call-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(40, 167, 69, 0.5);
+        }
+        
+        .floating-call-btn .phone-icon {
+            font-size: 1.2rem;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .section-title {
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+        
+        .testimonial {
+            background: var(--accent-blue);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+        
         footer {
             background: #222;
             color: white;
-            padding: 20px;
-            text-align: center;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .disclaimer {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+            
+            .floating-call-btn {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Toronto Plumbing Now</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -45,63 +300,239 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#areas">Service Areas</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     
+    <!-- Floating Call Button -->
+    <button class="floating-call-btn d-md-none" onclick="handleCallClick()">
+        <span class="phone-icon">📞</span>
+        Call Now for a Licensed Toronto Plumber
+    </button>
+    
+    <!-- Hero Section -->
     <header class="hero">
-        <h1>Fast, Reliable Emergency Plumbing Services</h1>
-        <p>Serving Downtown Toronto 24/7</p>
-        <a href="#contact" class="btn btn-primary btn-lg">Call Now: (416) 555-1234</a>
+        <div class="container">
+            <h1>Licensed & Affordable Plumbers in Toronto</h1>
+            <p>24/7 Emergency Plumbing Services • Fast Response • Licensed Professionals</p>
+            <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
+                <a href="tel:+1-416-555-0199" class="btn btn-primary btn-lg" onclick="handleCallClick()">
+                    📞 Call Now: (416) 555-0199
+                </a>
+                <a href="#contact" class="btn btn-secondary btn-lg">Request Free Quote</a>
+            </div>
+        </div>
     </header>
     
-    <section id="services" class="container my-5">
-        <h2 class="text-center">Our Services</h2>
-        <div class="row text-center">
+    <!-- Services Section -->
+    <section id="services" class="container my-5 py-5">
+        <h2 class="text-center section-title">Our Professional Plumbing Services</h2>
+        <div class="row g-4">
             <div class="col-md-4">
-                <h4>Emergency Repairs</h4>
-                <p>We fix leaks, burst pipes, and other urgent plumbing issues fast.</p>
+                <div class="service-card text-center">
+                    <div class="service-icon">🚰</div>
+                    <h4>Emergency Plumbing</h4>
+                    <p>24/7 emergency plumbing services for burst pipes, leaks, and urgent repairs. Fast response times across Toronto.</p>
+                </div>
             </div>
             <div class="col-md-4">
-                <h4>Drain Cleaning</h4>
-                <p>Clogged drain? We offer professional cleaning to keep your pipes flowing smoothly.</p>
+                <div class="service-card text-center">
+                    <div class="service-icon">🔄</div>
+                    <h4>Drain Cleaning</h4>
+                    <p>Professional drain cleaning services for clogged drains, sewer lines, and plumbing maintenance. Serving all Toronto neighborhoods.</p>
+                </div>
             </div>
             <div class="col-md-4">
-                <h4>Water Heater Services</h4>
-                <p>We repair, replace, and install water heaters for your home or business.</p>
+                <div class="service-card text-center">
+                    <div class="service-icon">🛡️</div>
+                    <h4>Backflow Testing</h4>
+                    <p>Certified backflow testing and prevention services to ensure your water supply remains safe and compliant.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card text-center">
+                    <div class="service-icon">🏢</div>
+                    <h4>Commercial Plumbing</h4>
+                    <p>Complete commercial plumbing solutions for businesses, offices, and industrial facilities throughout Toronto.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card text-center">
+                    <div class="service-icon">🚽</div>
+                    <h4>Clogged Drains Toronto</h4>
+                    <p>Specialized clogged drain services using advanced equipment and techniques to clear any blockage quickly.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card text-center">
+                    <div class="service-icon">🔧</div>
+                    <h4>Water Heater Services</h4>
+                    <p>Installation, repair, and maintenance of water heaters for residential and commercial properties.</p>
+                </div>
             </div>
         </div>
     </section>
     
-    <section id="contact" class="container my-5">
-        <h2 class="text-center">Get in Touch</h2>
+    <!-- Service Areas Section -->
+    <section id="areas" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Serving All Toronto Areas</h2>
+            <div class="row g-3 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="p-3">
+                        <h5>North York</h5>
+                        <p class="text-muted">Emergency plumbing services</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-3">
+                        <h5>Scarborough</h5>
+                        <p class="text-muted">Drain cleaning & repairs</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-3">
+                        <h5>Etobicoke</h5>
+                        <p class="text-muted">Commercial & residential</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-3">
+                        <h5>Downtown</h5>
+                        <p class="text-muted">24/7 emergency service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form Section -->
+    <section id="contact" class="container my-5 py-5">
+        <h2 class="text-center section-title">Get Your Free Quote Today</h2>
         <div class="row justify-content-center">
-            <div class="col-md-6 contact-form">
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                </form>
+            <div class="col-lg-8">
+                <div class="contact-form">
+                    <form id="leadForm" action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Type of Service Needed *</label>
+                            <select class="form-control" id="service" name="service" required>
+                                <option value="">Select a service...</option>
+                                <option value="Drain Cleaning">Drain Cleaning</option>
+                                <option value="Emergency Plumbing">Emergency Plumbing</option>
+                                <option value="Clogged Toilet">Clogged Toilet</option>
+                                <option value="Sump Pump">Sump Pump</option>
+                                <option value="Water Heater">Water Heater</option>
+                                <option value="Backflow Testing">Backflow Testing</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="postal" class="form-label">Zip/Postal Code *</label>
+                            <input type="text" class="form-control" id="postal" name="postal" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Additional Details</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Describe your plumbing issue or request..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 btn-lg">Get Free Quote</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
     
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Toronto Plumbing Now. All Rights Reserved.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Toronto Plumbing Now</h5>
+                    <p>Licensed and affordable plumbing services across Toronto</p>
+                    <p>📞 (416) 555-0199</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-links">
+                        <a href="#services">Services</a>
+                        <a href="#areas">Service Areas</a>
+                        <a href="#contact">Contact</a>
+                        <a href="/rent-this-site.html">Rent This Site</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2025 Toronto Plumbing Now. All Rights Reserved.</p>
+                    <div class="disclaimer">
+                        <strong>Disclaimer:</strong> This site is not owned or operated by a plumbing company. It is an independent lead generation platform.
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
     
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Call tracking function
+        function handleCallClick() {
+            console.log('Call button clicked - Phone: +1-416-555-0199');
+            // Future integration: CallRail, Google Analytics, etc.
+        }
+        
+        // Form submission handling
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const formObject = {};
+            formData.forEach((value, key) => {
+                formObject[key] = value;
+            });
+            
+            // Log to console for debugging
+            console.log('Form submission:', JSON.stringify(formObject, null, 2));
+            
+            // Show confirmation
+            alert('Thanks for your message! We\'ll get back to you shortly.');
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
